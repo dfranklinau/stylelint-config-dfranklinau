@@ -278,6 +278,7 @@ module.exports = {
       },
     ],
     "selector-attribute-quotes": "always",
+    "selector-class-pattern": null,
     "selector-no-vendor-prefix": true,
     "selector-pseudo-class-no-unknown": true,
     "selector-pseudo-element-colon-notation": "double",
