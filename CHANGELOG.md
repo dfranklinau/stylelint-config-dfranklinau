@@ -8,6 +8,15 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 --------------------------------------------------------------------------------
 
+## [Unreleased]
+
+### Changed
+
+- Upgraded the Node.js version listed in `engines` to be between `24.2.0` and
+  `25.0.0`.
+
+--------------------------------------------------------------------------------
+
 ## [1.1.0] - 2023-10-12
 
 ### Changed
