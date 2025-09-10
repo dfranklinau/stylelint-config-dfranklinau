@@ -22,6 +22,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - Upgraded `stylelint` and its related plugins to the latest versions.
 - Upgraded `jest` to the latest version.
 - Upgraded `prettier` to the latest version.
+- Simplified the unit test for deprecated Stylelint rules.
 
 ### Fixed
 

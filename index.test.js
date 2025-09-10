@@ -5,7 +5,7 @@ const fs = require("fs");
 const stylelint = require("stylelint");
 
 describe("when linting valid CSS", () => {
-  it("does not return an error or flag warnings", async () => {
+  it("does not return an error, flag warnings or identify deprecated rules", async () => {
     const css = fs.readFileSync("./__fixtures__/test.valid.css", "utf-8");
 
     const result = await stylelint.lint({
@@ -15,6 +15,7 @@ describe("when linting valid CSS", () => {
 
     expect(result.errored).toBe(false);
     expect(result.results[0].warnings).toHaveLength(0);
+    expect(result.results[0].deprecations).toHaveLength(0);
   });
 });
 
@@ -29,19 +30,4 @@ describe("when linting invalid CSS", () => {
     expect(result.errored).toBe(true);
     expect(result.results[0].warnings).toHaveLength(1);
   });
-});
-
-describe("when using the Stylelint configuration", () => {
-  const ruleNames = Object.keys(config.rules);
-
-  it("there is at least one rule", () => {
-    expect(ruleNames).not.toHaveLength(0)
-  });
-
-  for (const ruleName of ruleNames) {
-    it(`${ruleName}`, async () => {
-      const rule = await stylelint.rules[ruleName];
-      expect(rule.meta.deprecated).not.toBe(true);
-    });
-  }
 });
