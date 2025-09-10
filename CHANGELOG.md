@@ -18,6 +18,11 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - Upgraded `jest` to the latest version.
 - Upgraded `prettier` to the latest version.
 
+### Fixed
+
+- Updated the Styelint configuration unit tests to be `async` (as a result of
+  version upgrades).
+
 --------------------------------------------------------------------------------
 
 ## [1.1.0] - 2023-10-12

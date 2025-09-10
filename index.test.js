@@ -32,10 +32,16 @@ describe("when linting invalid CSS", () => {
 });
 
 describe("when using the Stylelint configuration", () => {
-  const rules = Object.keys(config.rules);
-  const deprecatedRuleNames = Object.values(stylelint.rules)
-    .filter((rule) => rule.meta.deprecated)
-    .map((rule) => rule.ruleName);
+  const ruleNames = Object.keys(config.rules);
 
-  deprecatedRuleNames.forEach(rule => expect(rules).not.toContain(rule));
+  it("there is at least one rule", () => {
+    expect(ruleNames).not.toHaveLength(0)
+  });
+
+  for (const ruleName of ruleNames) {
+    it(`${ruleName}`, async () => {
+      const rule = await stylelint.rules[ruleName];
+      expect(rule.meta.deprecated).not.toBe(true);
+    });
+  }
 });
