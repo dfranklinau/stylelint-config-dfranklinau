@@ -31,7 +31,7 @@
   },
   "scripts": {
     "stylelint": "stylelint --config ./index.js",
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "version": "1.1.0"
 }

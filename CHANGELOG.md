@@ -10,6 +10,11 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- Added the `--experimental-vm-modules` to the `npm test` script to allow Jest
+  to import `stylelint`.
+
 ### Changed
 
 - Upgraded the Node.js version listed in `engines` to be between `24.2.0` and
