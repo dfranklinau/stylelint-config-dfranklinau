@@ -45,6 +45,8 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 - Everything.
 
+--------------------------------------------------------------------------------
+
 [Unreleased]: https://github.com/dfranklinau/stylelint-config-dfranklinau/compare/v1.1.0...HEAD
 [1.1.0]: https://github.com/dfranklinau/stylelint-config-dfranklinau/releases/tag/v1.1.0
 [1.0.0]: https://github.com/dfranklinau/stylelint-config-dfranklinau/releases/tag/v1.0.0
